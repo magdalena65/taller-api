@@ -11,21 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>ID: ${element.id}</p>`;
             })
         })
-        const newComment = {
-            name: 'Agregar comentario nuevo usando el método Post',
-            body: 'El cuerpo del comentario nuevo iría aquí',
-        };
-    
-    fetch(url, {
-        method: 'POST',
-        body: JSON.stringify(newComment),
-        headers: {
-            'Content-type': 'application/json; charset=UTF-8'
-        }
-    })
 
-    .then(response => response.json())
-    .then(comment => {
-        document.getElementById('info').innerHTML += `<h1>${comment.name}</h1><p>${comment.body}</p><p>ID: ${comment.id}</p>`;
-    })
 })
+                          
